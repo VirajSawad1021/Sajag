@@ -227,3 +227,36 @@
     level_in:
     - insufficient
     max_signals: 0
+- id: 23_text_fake_prize_rom
+  stage: before_payment
+  text_file: text/t3_fake_prize_rom.txt
+  expect:
+    level_in:
+    - high
+    must_flag:
+    - fake_prize_lottery
+- id: 24_text_fake_prize_ne
+  stage: before_payment
+  text_file: text/t4_fake_prize_ne.txt
+  expect:
+    level_in:
+    - high
+    must_flag:
+    - fake_prize_lottery
+- id: 25_text_fake_bank_kyc_rom
+  stage: before_payment
+  text_file: text/t5_fake_bank_kyc_rom.txt
+  expect:
+    level_in:
+    - high
+    must_flag:
+    - fake_bank_kyc
+    - otp_credential_request
+- id: 26_text_fake_bank_kyc_ne
+  stage: before_payment
+  text_file: text/t6_fake_bank_kyc_ne.txt
+  expect:
+    level_in:
+    - high
+    must_flag:
+    - fake_bank_kyc

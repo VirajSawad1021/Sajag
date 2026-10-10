@@ -1,0 +1,36 @@
+id: fake_prize_lottery
+severity: high
+title_en: Fake prize, lottery, or gift offer
+title_ne: नकली इनाम, लटरी वा उपहारको प्रस्ताव
+description: A message claims you won a prize, lottery, lucky draw, or gift (phone, bike, cash) but you must pay a fee, tax, or share details to claim it.
+why_en: Real prizes never require you to pay money first. This is a classic advance-fee scam.
+why_ne: साँचो इनाममा कहिल्यै पहिले पैसा तिर्न पर्दैन। यो अग्रिम शुल्क ठगीको प्रसिद्ध तरिका हो।
+not_always_scam_en: Some legitimate promotions exist, but they never ask for payment to release a prize. Verify through official channels only.
+keywords:
+  - lottery
+  - lucky draw
+  - prize
+  - inam
+  - लटरी
+  - लकी ड्र
+  - इनाम
+  - उपहार
+  - jeeteko
+  - जितेको
+  - claim garna
+  - tax lagi
+  - processing fee
+examples:
+  - lang: rom-ne
+    text: "Tapai iPhone 15 jiteko chau! Claim garna 2000 tax pathaunus"
+  - lang: ne
+    text: "तपाईंले बाइक जित्नुभएको छ! इनाम लिनका लागि ५००० प्रक्रिसिङ शुल्क तिर्नुहोस्"
+  - lang: en
+    text: "Congratulations! You won Rs 50,000. Send Rs 500 processing fee to claim."
+next_steps:
+  - en: Do not pay any fee to claim a prize. Real prizes are free.
+    ne: इनाम लिनका लागि कुनै शुल्क नतिरनुहोस्। साँचो इनाम निःशुल्क हुन्छ।
+  - en: Check if the sender is from an official company page. Scammers use fake pages.
+    ne: पठाउने आधिकारिक कम्पनीको पृष्ठबाट हो कि होइन हेर्नुहोस्। ठगहरू नकली पृष्ठ प्रयोग गर्छन्।
+  - en: If it sounds too good to be true, it probably is.
+    text: यो राम्रो देखिन्छ भने, यो ठगी हुन्छ।

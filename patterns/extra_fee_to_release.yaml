@@ -1,7 +1,7 @@
 id: extra_fee_to_release
 severity: high
 title_en: Extra fee demanded to release item or refund
-title_ne: सामान वा रिफन्ड छुटाउन थप शुल्क माग
+title_ne: सामान वा रिफन्ड दिन थप शुल्क माग
 description: After payment, a new "customs", "clearance", "delivery" or "refund processing" fee is demanded.
 why_en: Paying more to get back money you already paid is a classic pattern of repeated loss.
 why_ne: पहिले तिरेको पैसा फिर्ता पाउन फेरि पैसा तिर्नु बारम्बार ठगिने सामान्य तरिका हो।

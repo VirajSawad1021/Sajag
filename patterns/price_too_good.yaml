@@ -1,7 +1,7 @@
 id: price_too_good
 severity: low
 title_en: Price far below the usual market price
-title_ne: बजार मूल्यभन्दा धेरै कम मूल्य
+title_ne: बजार मूल्यभन्दा धेरै सस्तो
 description: The product (often phones, electronics, branded goods) is offered far below the usual price.
 why_en: Very low prices are used to attract people and make them skip checks.
 why_ne: धेरै सस्तो मूल्य देखाएर मानिसलाई आकर्षित गरी जाँच नगरी किन्न लगाइन्छ।
