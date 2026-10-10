@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../api.dart';
 import '../demo.dart';
 import '../l10n.dart';
+import '../local_gemma.dart';
 import '../models.dart';
 import '../notifications.dart';
 import '../store.dart';
@@ -31,6 +33,30 @@ class _SettingsScreenState extends State<SettingsScreen> {
         _testing = false;
       });
     }
+  }
+
+  String? _localResult;
+  bool _localBusy = false;
+
+  /// Installs the on-device model if needed, then times one check of the sample scam chat.
+  Future<void> _testLocal() async {
+    setState(() {
+      _localBusy = true;
+      _localResult = null;
+    });
+    try {
+      if (!localGemma.installed) await localGemma.install();
+      final img = (await rootBundle.load('assets/demo/scam-chat.png')).buffer.asUint8List();
+      final run = await localGemma.run(scamCheckPrompt, images: [img], onText: (t) {
+        if (mounted) setState(() => _localResult = t);
+      });
+      final json = parseJson(run.text);
+      final signals = json == null ? 'Not valid JSON' : 'Signals: ${(json['signals'] as List?)?.map((s) => s['pattern_id']).join(', ')}';
+      _localResult = '${run.summary}\n\n$signals\n\n${run.text}';
+    } catch (e) {
+      _localResult = 'Error: $e';
+    }
+    if (mounted) setState(() => _localBusy = false);
   }
 
   @override
@@ -103,6 +129,35 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ne ? '${c.title} ले आज डेलिभरी गर्ने भनेको थियो। सामान आयो?' : '${c.title} promised delivery today. Did it arrive?',
           );
         }),
+        const SizedBox(height: 26),
+        Text(ne ? 'फोनमै Gemma (बिटा)' : 'On-device Gemma (beta)', style: T.label),
+        const SizedBox(height: 6),
+        Module(
+          child: ListenableBuilder(
+            listenable: localGemma,
+            builder: (context, _) => Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Text(
+                ne
+                    ? 'Gemma 4 E2B (२.६ GB) Google को LiteRT-LM मा फोनमै चल्छ — इन्टरनेट बिना, प्रमाण फोनबाहिर नजाने।'
+                    : "Gemma 4 E2B (2.6 GB) runs on this phone with Google's LiteRT-LM — no internet, evidence never leaves the phone.",
+                style: T.meta,
+              ),
+              const SizedBox(height: 10),
+              if (localGemma.downloadProgress != null)
+                LinearProgressIndicator(value: localGemma.downloadProgress! / 100, color: C.ink),
+              Pill(
+                _localBusy ? (ne ? 'चल्दैछ…' : 'Running…') : (ne ? 'नमुना च्याट फोनमै जाँच्नुहोस्' : 'Check the sample chat on-device'),
+                primary: false,
+                icon: Icons.memory_rounded,
+                onTap: _localBusy ? null : _testLocal,
+              ),
+              if (_localResult != null) ...[
+                const SizedBox(height: 10),
+                SelectableText(_localResult!, style: T.small),
+              ],
+            ]),
+          ),
+        ),
         const SizedBox(height: 26),
         Module(child: Text(tr('privacyNote'), style: T.small)),
       ]),

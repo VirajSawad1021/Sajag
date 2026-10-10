@@ -117,3 +117,12 @@ def test_sms_payment_read_by_code():
     assert p["amount"] == "3200" and p["transaction_id"] == "TXN-7Q4K-2291" and p["date"] == "2026-09-28"
     assert any(f["field"] == "transaction_id" and f["span"] for f in body["facts"])
     assert any(e["type"] == "payment_made" for e in body["events"])
+
+
+def test_every_pattern_is_complete():
+    # A missing field only shows up as a crash mid-analysis, so check them all up front.
+    for pid, p in catalog.patterns().items():
+        for field in ("severity", "title_en", "title_ne", "why_en", "why_ne"):
+            assert p.get(field), f"{pid}: missing {field}"
+        for step in p.get("next_steps", []):
+            assert step.get("en") and step.get("ne"), f"{pid}: next step needs both en and ne"

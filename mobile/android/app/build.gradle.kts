@@ -21,7 +21,8 @@ android {
         applicationId = "np.sajag.sajag"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
+        minSdk = 30  // LiteRT-LM (on-device Gemma 4) needs Android 11+
+        ndk { abiFilters += listOf("arm64-v8a") }  // LiteRT-LM ships arm64 only
         targetSdk = flutter.targetSdkVersion
         // Uses the version code from pubspec.yaml. When using split APKs, 1000 * ABI_VERSION
         // is added automatically by Flutter. (https://developer.android.com/studio/build/configure-apk-splits#configure-APK-versions)

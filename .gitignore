@@ -14,3 +14,9 @@ test data/private/
 # Official forms downloaded for reference (not ours to redistribute)
 financila_fraud_application_*.pdf
 data/official/
+
+# demo video working files (recordings, renders)
+demo-video/*
+!demo-video/build.py
+!demo-video/rec.sh
+!demo-video/narration*.txt

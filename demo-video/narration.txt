@@ -1,0 +1,10 @@
+01|In Nepal, online shopping scams take people's savings every day. And once money leaves your wallet, it is almost impossible to get back. Sajag is a scam safety companion, powered by Gemma 4, built for the few seconds before you pay.
+02|Here, a seller first promised cash on delivery, then switched to advance only, and sent a payment QR. I share the chat and the QR straight into Sajag.
+03|Gemma 4 reads the screenshots, in Nepali, English or Romanized Nepali, and shows what it finds as it goes. Every warning must quote the exact line from the evidence, or it is thrown away.
+04|High caution. Scam X-Ray marks each warning on the screenshot itself. And the QR is decoded by code, not by AI. It pays a different person than the shop in the chat.
+05|For anyone who prefers to listen, Sajag reads the result aloud, in Nepali.
+06|It also catches the most common trick on Messenger. A hacked friend asking for money. Gemma tells you exactly what to ask, to check it is really them.
+07|If you have already paid, Sajag switches to recovery. The steps follow Nepal Rastra Bank's order, with verified wallet and Cyber Bureau contacts.
+08|Gemma then drafts the Cyber Bureau application in Nepali, with the Bikram Sambat date, and every piece of evidence fingerprinted, ready to print and submit.
+09|Paste a bank SMS, and the amount and transaction ID are read by code. On the promised delivery day, Sajag asks: did it arrive?
+10|Sajag is open source, and anyone can add a new scam pattern. Before you pay, be Sajag.

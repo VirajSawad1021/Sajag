@@ -1,0 +1,3 @@
+02|Here, a seller first promised cash on delivery, then switched to advance only, and sent a payment QR. I add the chat and the QR to Sajag. You can also share them straight from Messenger.
+06|It also catches the most common trick on Messenger. A hacked friend asking for money, and then for a code. Sajag tells you to call them on the number you already have, before sending anything.
+09|And on the delivery date the seller promised, Sajag checks in. Did it arrive? If not, one tap starts recovery.

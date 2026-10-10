@@ -53,6 +53,8 @@ dependencies:
   receive_sharing_intent: 1.8.1
   archive: ^4.3.0
   flutter_tts: ^4.2.5
+  flutter_edge_ai: ^2.1.1
+  flutter_edge_ai_litertlm: ^1.11.1
 
 dev_dependencies:
   flutter_test:
