@@ -1,0 +1,70 @@
+# Small labelled set for checking Sajag's behaviour. Text-only so far; add screenshot cases under
+# evals/images/ (synthetic or with permission — never real people's private chats without consent).
+# expected.level_in: acceptable overall levels. must_flag / must_not_flag: pattern ids.
+- id: cod_to_advance_rom
+  lang: rom-ne
+  stage: before_payment
+  text: |
+    Seller: Hajur COD milcha, ghar samma delivery garchau
+    Buyer: Thik cha, kahile aaucha?
+    Seller: Sorry dai COD band bhayo, advance 50% pathaunus. Stock sakincha aaja nai
+  expected:
+    level_in: [caution, high]
+    must_flag: [advance_payment, terms_changed]
+    must_not_flag: [otp_credential_request]
+
+- id: otp_request_en
+  lang: en
+  stage: before_payment
+  text: |
+    Seller: To confirm your order please send the OTP you just received.
+  expected:
+    level_in: [high]
+    must_flag: [otp_credential_request]
+
+- id: citizenship_ne
+  lang: ne
+  stage: before_payment
+  text: |
+    बिक्रेता: अर्डर पक्का गर्न नागरिकताको फोटो पठाउनुहोस्।
+  expected:
+    level_in: [high]
+    must_flag: [identity_document_request]
+
+- id: refund_fee_after_payment
+  lang: rom-ne
+  stage: after_payment
+  text: |
+    Seller: Parcel customs ma rokiyo. Release garna 2500 clearance fee pathaunus.
+    Seller: Natra refund garna sakdaina.
+  expected:
+    level_in: [high]
+    must_flag: [extra_fee_to_release]
+
+- id: honest_cod_seller
+  lang: rom-ne
+  stage: before_payment
+  text: |
+    Seller: Namaste! Kurta ko price Rs 1800. COD available cha, ghar ma aayera check garera matra paisa dinus.
+    Seller: Size milena bhane 3 din bhitra exchange garna milcha.
+  expected:
+    level_in: [low]
+    must_not_flag: [advance_payment, no_cod_or_verification, urgency_pressure]
+
+- id: honest_preorder_advance
+  lang: en
+  stage: before_payment
+  text: |
+    Seller: This is a custom-made cake, so we take Rs 500 advance and the rest on delivery.
+    Seller: You can also visit our shop in Lazimpat to pay the advance in person.
+  expected:
+    level_in: [low, caution]
+    must_not_flag: [otp_credential_request, identity_document_request]
+
+- id: too_little_info
+  lang: en
+  stage: before_payment
+  text: |
+    Seller: ok
+  expected:
+    level_in: [insufficient, low]
