@@ -1,6 +1,16 @@
 # Official places to get help. Sajag only links to these and prepares drafts — it never submits anything.
 # Every entry was read from the organisation's own website on last_checked. Re-check before each release:
 # numbers and procedures change. Do not add numbers from news articles, blogs or chats.
+#
+# Independent re-verification, 2026-10-10 (static page fetches, evidence grepped in the HTML):
+#   khalti          all phones + emails found on khalti.com/contact/                     [confirmed]
+#   nrb_gunaso      portal title "NRB Grievance Management System"; NRB notice page up   [confirmed]
+#   cyber_bureau    email on report-cyber-crime/; both phones on the Bureau homepage;
+#                   fraud-application PDF downloads (301 KB, valid PDF)                  [confirmed]
+#   consumer_complaint  page serves the consumer complaint form, no login wall           [confirmed — first time]
+#   bank_or_wallet  nrb.org.np reachable                                                 [page only — generic guidance]
+#   esewa           site is a JS app; numbers not present in static HTML, so this
+#                   method could not re-confirm them — date kept from the team's check   [unverified by this pass]
 - id: bank_or_wallet
   name_en: Your bank or wallet provider
   name_ne: तपाईंको बैंक वा वालेट कम्पनी
@@ -52,7 +62,7 @@
   name_en: Department of Commerce consumer complaint form
   name_ne: वाणिज्य विभाग उपभोक्ता उजुरी फारम
   url: https://monitoring.doc.gov.np/ConsumerComplaint
-  note_en: For problems with goods or services such as quality or price. Not yet re-verified by the team.
+  note_en: For problems with goods or services such as quality or price.
   note_ne: सामान वा सेवाको गुणस्तर, मूल्य जस्ता समस्याका लागि।
-  source: null
-  last_checked: null
+  source: https://monitoring.doc.gov.np/ConsumerComplaint
+  last_checked: 2026-10-10
