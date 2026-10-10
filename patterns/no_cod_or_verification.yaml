@@ -1,22 +1,23 @@
 id: no_cod_or_verification
 severity: medium
-title_en: Refuses cash on delivery or any way to verify
-title_ne: COD वा प्रमाणित गर्ने उपाय अस्वीकार
-description: The seller refuses COD, a video call, a shop visit or any other way to check the item exists.
-why_en: Without any way to verify, you are relying only on trust.
-why_ne: जाँच्ने कुनै उपाय नभएपछि तपाईं केवल विश्वासमा भर पर्नुहुन्छ।
-not_always_scam_en: Small sellers sometimes stop COD after bad experiences. Ask for an alternative way to verify.
+title_en: No cash on delivery, no video call, no way to verify
+title_ne: COD छैन, भिडियो कल छैन, बिक्रेता पुष्टि गर्न सकिँदैन
+description: The seller refuses COD, won't do a video call to show the item, and blocks any way for the buyer to verify before paying.
+why_en: A seller who has nothing to hide will usually allow at least one way to verify. Refusing all verification is a strong signal.
+why_ne: जुन बिक्रेताले फिचाउन सक्ने कुरा नभएको हुन्छ, उहाँले सामान्यतया कसरी न कसरी पुष्टि गर्न दिन्छन्। सबै पुष्टि नाकाबुली गर्दा ठगीको ठूलो संकेत हुन्छ।
+not_always_scam_en: Some remote sellers genuinely cannot do COD or video calls. Check their history and reviews.
 keywords:
-  - cod mildaina
   - cod chaina
-  - no cod
   - cod hudaina
-  - video call mildaina
-  - COD हुँदैन
-  - COD मिल्दैन
+  - video call chaina
+  - verify garna dina
+  - पुष्टि गर्न दिन्न
+  - कोड छैन
 examples:
   - lang: rom-ne
-    text: "COD mildaina dai, esewa ma pathaunus"
+    text: "COD chaina, video call pani hudaina. Paisa pathaunus matra option ho"
 next_steps:
-  - en: Ask for a live video of the item with today's date written on paper.
-    ne: आजको मिति कागजमा लेखेर सामानको लाइभ भिडियो देखाउन अनुरोध गर्नुहोस्।
+  - en: Ask for a live video call to see the item. If they refuse, do not pay.
+    ne: सामान हेर्नका लागि लाइभ भिडियो कल गर्न भन्नुहोस्। नमान्न भने पैसा नतिरनुहोस्।
+  - en: Check if the seller has a physical shop or known social media presence.
+    ne: बिक्रेताको भौतिक पसल वा चिनिएको सोशल मिडिया छ कि छैन हेर्नुहोस्।
