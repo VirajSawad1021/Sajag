@@ -11,7 +11,9 @@ import 'models.dart';
 class Reminders {
   final _plugin = FlutterLocalNotificationsPlugin();
   bool _ready = false;
-  void Function(String caseId)? onOpenCase;
+  /// Called when a notification (or one of its buttons) is tapped. [action] is 'arrived', 'not_arrived' or null.
+  void Function(String caseId, String? action)? onOpenCase;
+  NotificationResponse? _launch; // a tap that started the app; handled once the UI is ready
 
   static const _details = NotificationDetails(
     android: AndroidNotificationDetails(
@@ -23,6 +25,21 @@ class Reminders {
     ),
   );
 
+  // Delivery check-ins carry Yes / Not yet buttons (they open the app, which then acts on the answer).
+  static NotificationDetails _checkIn() => NotificationDetails(
+        android: AndroidNotificationDetails(
+          'sajag_followups',
+          'Sajag follow-ups',
+          channelDescription: 'Reminders to check deliveries, deadlines and recovery steps',
+          importance: Importance.high,
+          priority: Priority.high,
+          actions: [
+            AndroidNotificationAction('arrived', lang.ne ? 'हो, आयो' : 'Yes, arrived', showsUserInterface: true, cancelNotification: true),
+            AndroidNotificationAction('not_arrived', lang.ne ? 'अहिलेसम्म आएन' : 'Not yet', showsUserInterface: true, cancelNotification: true),
+          ],
+        ),
+      );
+
   Future<void> init() async {
     if (_ready) return;
     try {
@@ -33,13 +50,22 @@ class Reminders {
           android: AndroidInitializationSettings('@mipmap/ic_launcher'),
         ),
         onDidReceiveNotificationResponse: (r) {
-          if (r.payload != null) onOpenCase?.call(r.payload!);
+          if (r.payload != null) onOpenCase?.call(r.payload!, r.actionId);
         },
       );
+      final launch = await _plugin.getNotificationAppLaunchDetails();
+      if (launch?.didNotificationLaunchApp ?? false) _launch = launch!.notificationResponse;
       _ready = true;
     } catch (e) {
       debugPrint('Notifications unavailable: $e');
     }
+  }
+
+  /// Act on a notification tap that launched the app (call after [onOpenCase] is set and the UI exists).
+  void handleLaunch() {
+    final r = _launch;
+    _launch = null;
+    if (r?.payload != null) onOpenCase?.call(r!.payload!, r.actionId);
   }
 
   Future<bool> requestPermission() async {
@@ -66,7 +92,7 @@ class Reminders {
       await _plugin.zonedSchedule(
         id: _id(c.id, 'deadline:${d['due']}:$what'),
         scheduledDate: at,
-        notificationDetails: _details,
+        notificationDetails: _checkIn(),
         androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
         title: lang.ne ? 'Sajag: आज फलोअप गर्ने दिन' : 'Sajag: follow-up due today',
         body: lang.ne
@@ -98,7 +124,7 @@ class Reminders {
   Future<void> showNow(SajagCase c, String title, String body) async {
     if (!_ready) return;
     await requestPermission();
-    await _plugin.show(id: _id(c.id, 'now'), title: title, body: body, notificationDetails: _details, payload: c.id);
+    await _plugin.show(id: _id(c.id, 'now'), title: title, body: body, notificationDetails: _checkIn(), payload: c.id);
   }
 }
 

@@ -146,6 +146,28 @@ const _s = <String, Map<String, String>>{
   },
   'hiddenCount': {'ne': 'ठाउँ लुकाइयो', 'en': 'areas hidden'},
   'useHidden': {'ne': 'यही प्रयोग गर्नुहोस्', 'en': 'Use this'},
+  'didItArrive': {'ne': 'सामान आइपुग्यो?', 'en': 'Did it arrive?'},
+  'yesArrived': {'ne': 'हो, आयो', 'en': 'Yes, arrived'},
+  'notYetArrived': {'ne': 'आएन', 'en': 'Not yet'},
+  'caseResolved': {'ne': 'यो केस समाधान भएको छ।', 'en': 'This case is resolved.'},
+  'intro1Title': {'ne': 'पैसा पठाउनुअघि, सजग।', 'en': 'Before you pay, stay alert.'},
+  'intro1Body': {
+    'ne': 'बिक्रेताको च्याट, भुक्तानी QR वा भ्वाइस नोट दिनुहोस्। Gemma 4 ले पढ्छ र तपाईंकै स्क्रिनसटमा चेतावनी देखाउँछ — हरेक चेतावनी प्रमाणसहित।',
+    'en': "Share the seller's chat, payment QR or voice note. Gemma 4 reads it and marks the warning signs on your own screenshot — every one backed by evidence.",
+  },
+  'intro2Title': {'ne': 'तपाईंको केस, तपाईंकै फोनमा', 'en': 'Your cases stay on your phone'},
+  'intro2Body': {
+    'ne': 'खाता बनाउनु पर्दैन। केस यही फोनमा बस्छन्। पठाउनुअघि OTP, ब्यालेन्स वा खाता नम्बर लुकाउन सकिन्छ।',
+    'en': 'No account needed. Cases are kept on this phone, and you can hide OTPs, balances or account numbers before anything is sent.',
+  },
+  'intro3Title': {'ne': 'सिधै सेयर गर्नुहोस्', 'en': 'Share straight to Sajag'},
+  'intro3Body': {
+    'ne': 'Messenger वा ग्यालरीमा Share → Sajag थिच्नुहोस्। पैसा गइसकेको छ भने Sajag ले रिकभरीका कदम देखाउँछ र साइबर ब्युरोको निवेदन भर्न मद्दत गर्छ।',
+    'en': 'In Messenger or Gallery, tap Share → Sajag. If money is already gone, Sajag walks you through recovery and helps fill the Cyber Bureau application.',
+  },
+  'next': {'ne': 'अर्को', 'en': 'Next'},
+  'start': {'ne': 'सुरु गरौं', 'en': "Let's start"},
+  'skip': {'ne': 'छोड्नुहोस्', 'en': 'Skip'},
   'readAloud': {'ne': 'सुनाउनुहोस्', 'en': 'Read aloud'},
   'stopReading': {'ne': 'रोक्नुहोस्', 'en': 'Stop'},
   'noNepaliVoice': {

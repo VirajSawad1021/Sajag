@@ -101,7 +101,7 @@ class HomeScreen extends StatelessWidget {
 class _TopBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Row(children: [
-        ClipOval(child: Image.asset('assets/art/orb.webp', width: 34, height: 34, fit: BoxFit.cover)),
+        ClipRRect(borderRadius: BorderRadius.circular(9), child: Image.asset('assets/art/sajag-icon.png', width: 34, height: 34)),
         const SizedBox(width: 10),
         Text('Sajag', style: T.h2),
         const SizedBox(width: 6),

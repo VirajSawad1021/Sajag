@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:share_plus/share_plus.dart';
 
 import '../api.dart';
+import '../delivery.dart';
 import '../demo.dart';
 import '../l10n.dart';
 import '../models.dart';
@@ -184,6 +185,42 @@ class _CaseScreenState extends State<CaseScreen> {
                 ]),
               ),
             ),
+            // ---- "Did it arrive?" once a promised date has come
+            for (final d in dueDeadlines(c).take(1)) ...[
+              const SizedBox(height: 14),
+              RaisedCard(
+                accent: C.caution,
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  Row(children: [
+                    const Icon(Icons.local_shipping_outlined, color: C.caution),
+                    const SizedBox(width: 10),
+                    Expanded(child: Text(tr('didItArrive'), style: T.h3)),
+                  ]),
+                  const SizedBox(height: 4),
+                  Text('${lang.ne ? (d['what_ne'] ?? d['what_en']) : d['what_en']} · ${d['due']}', style: T.small),
+                  const SizedBox(height: 12),
+                  Row(children: [
+                    Expanded(child: Pill(tr('yesArrived'), primary: false, icon: Icons.check_rounded,
+                        onTap: () => answerDelivery(Navigator.of(context), c, arrived: true))),
+                    const SizedBox(width: 8),
+                    Expanded(child: Pill(tr('notYetArrived'), danger: true, icon: Icons.healing_rounded,
+                        onTap: () => answerDelivery(Navigator.of(context), c, arrived: false))),
+                  ]),
+                ]),
+              ),
+            ],
+            if (c.status == CaseStatus.resolved) ...[
+              const SizedBox(height: 14),
+              Module(
+                color: C.lowBg,
+                borderColor: C.lowBg,
+                child: Row(children: [
+                  const Icon(Icons.verified_outlined, color: C.low),
+                  const SizedBox(width: 10),
+                  Expanded(child: Text(tr('caseResolved'), style: T.small.copyWith(color: C.low, fontWeight: FontWeight.w600))),
+                ]),
+              ),
+            ],
             for (final w in a.warnings) ...[
               const SizedBox(height: 8),
               Text(w, style: T.meta),
