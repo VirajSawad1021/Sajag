@@ -46,7 +46,7 @@ curl -s -X POST http://localhost:8000/api/analyze \
 
 ## Reading the result
 
-- `overall.level` — risk banner shown to the user (`ok`, `caution`, …).
+- `overall.level` — risk banner shown to the user: `high`, `caution`, `low` or `insufficient` (not enough evidence to judge).
 - `signals[]` — each has `pattern_id`, `title_en`/`title_ne`, `severity`, `quote`, `source_id`. Read the `quote` aloud and point to it in the evidence.
 - `qr[]` — decoded by plain code (EMVCo), including payee name and CRC check; a payee that does not match the seller name in the chat is flagged without AI.
 - `next_steps[]`, `deadlines[]` — advice drawn from reviewed pattern files, not invented by the model.
