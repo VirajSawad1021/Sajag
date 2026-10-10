@@ -164,6 +164,25 @@
     - qr_payee_mismatch
     - no_cod_or_verification
     note: 'follow-up: earlier chat + seller''s reply to a Suraksha Script'
+- id: 23_friend_hacked_account
+  stage: before_payment
+  images:
+  - images/23_friend_hacked_account.png
+  expect:
+    level_in:
+    - high
+    must_flag:
+    - friend_impersonation
+    note: hacked account asking a friend for money and an OTP
+- id: 24_text_friend_request
+  stage: before_payment
+  text: 'Didi: Bhai urgent 3000 chahiyo, khalti ma pathaideu. Call garna mildaina
+    meeting ma chu.'
+  expect:
+    level_in:
+    - high
+    must_flag:
+    - friend_impersonation
 - id: 16_text_cod_switch
   stage: before_payment
   text_file: text/t1_pasted_cod_switch.txt

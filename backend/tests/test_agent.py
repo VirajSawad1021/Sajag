@@ -10,10 +10,14 @@ def test_private_searches_blocked():
 def test_scripts_without_nepali_fall_back_or_drop():
     out = _parse_output(
         '{"scripts": [{"purpose_en": "a", "message_ne": "भिडियो पठाउनुस्"},'
-        ' {"purpose_en": "b", "message_en": "Send a video"}, {"purpose_en": "c"}]}'
+        ' {"purpose_en": "b", "message_ne": "लाइभ भिडियो", "message_en": "Live video"}, {"purpose_en": "c"}]}'
     )
     assert out is not None
-    assert [s.message_ne for s in out.scripts] == ["भिडियो पठाउनुस्", "Send a video"]
+    assert [s.message_ne for s in out.scripts] == ["भिडियो पठाउनुस्", "लाइभ भिडियो"]
+
+
+def test_english_in_the_nepali_field_triggers_a_retry():
+    assert _parse_output('{"scripts": [{"message_ne": "I will call you first"}]}') is None
 
 
 def test_no_usable_scripts_is_none():

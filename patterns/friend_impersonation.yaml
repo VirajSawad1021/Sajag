@@ -1,0 +1,32 @@
+id: friend_impersonation
+severity: high
+title_en: A friend or relative asks for money urgently and avoids a call
+title_ne: साथी वा आफन्तको खाताबाट हतारमा पैसा माग, फोन गर्न टार्ने
+description: A message from a friend's or relative's account (Messenger, WhatsApp, Instagram, Viber) urgently asks for money, a top-up, or a code "sent by mistake", and avoids a voice or video call, or asks to pay a different number or account.
+why_en: Hacked accounts are used to message everyone in the contact list. The name and photo are real, but the person typing may not be.
+why_ne: ह्याक गरिएका खाताबाट सबै साथीलाई म्यासेज पठाइन्छ। नाम र फोटो साँचो भए पनि टाइप गर्ने व्यक्ति अर्कै हुन सक्छ।
+not_always_scam_en: Friends do ask for help. A real friend won't mind you calling them on their usual number first.
+keywords:
+  - paisa pathaideu
+  - pathaideu na
+  - phone garna mildaina
+  - call garna mildaina
+  - galti le
+  - mistakenly sent
+  - sent by mistake
+  - फोन गर्न मिल्दैन
+  - गल्तीले
+examples:
+  - lang: rom-ne
+    text: "Ma emergency ma chu, 5000 esewa ma pathaideu, phone garna mildaina ahile"
+  - lang: rom-ne
+    text: "Galti le timro number ma code gayo, pathaideu na plz"
+  - lang: en
+    text: "I'm stuck, can you send Rs 5,000 to this number? Can't talk right now"
+next_steps:
+  - en: Call your friend on the phone number you already have — not through this chat — before sending anything.
+    ne: केही पठाउनुअघि साथीलाई पहिलेदेखि भएको नम्बरमा फोन गर्नुहोस् — यो च्याटबाट होइन।
+  - en: Ask something only they would know. Never send a code that arrived on your phone.
+    ne: उहाँलाई मात्र थाहा हुने प्रश्न सोध्नुहोस्। तपाईंको फोनमा आएको कोड कहिल्यै नपठाउनुहोस्।
+  - en: If the account was hacked, tell your friend and report the account so others are warned.
+    ne: खाता ह्याक भएको रहेछ भने साथीलाई खबर गर्नुहोस् र अरूलाई जोगाउन त्यो खाता रिपोर्ट गर्नुहोस्।

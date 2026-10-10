@@ -176,6 +176,14 @@ IMAGES: dict[str, str] = {
         ("them", "Video pathauna mildaina dai, time chaina. Hamro page ma 5 hajar follower cha, trust garnus.", "19:07"),
         ("them", "Aaja 8 baje samma advance napathaye arko customer lai bechchu.", "19:08"),
     ]),
+    # 23. Hacked friend's account asking for money and a code (Messenger)
+    "23_friend_hacked_account.png": chat_html("Sita Didi", [
+        ("day", "Today", ""),
+        ("them", "Bhai, ma emergency ma chu. Hospital ma chu, 5000 esewa ma pathaideu na plz, bholi farkaidinchu.", "21:02"),
+        ("me", "Ke bhayo didi? Call garu?", "21:03"),
+        ("them", "Phone garna mildaina ahile, network chhaina. Yo number ma pathau: 9800000000", "21:03"),
+        ("them", "Ani galti le timro number ma euta code gayo, tyo pani pathaideu hai.", "21:04"),
+    ]),
     # 2. Honest seller in Devanagari (WhatsApp)
     "02_honest_seller_ne.png": chat_html("ठमेल कुर्ता हाउस", [
         ("them", "नमस्ते! कटन कुर्ताको मूल्य रु. १,८०० हो। क्यास अन डेलिभरी उपलब्ध छ।", "11:10"),
@@ -301,6 +309,12 @@ CASES = [
          images=["images/01_scam_cod_to_advance_qr.png", "images/22_seller_reply_refuses_video.png"],
          expect=dict(level_in=["high"], must_flag=["qr_payee_mismatch", "no_cod_or_verification"],
                      note="follow-up: earlier chat + seller's reply to a Suraksha Script")),
+    dict(id="23_friend_hacked_account", stage="before_payment", images=["images/23_friend_hacked_account.png"],
+         expect=dict(level_in=["high"], must_flag=["friend_impersonation"],
+                     note="hacked account asking a friend for money and an OTP")),
+    dict(id="24_text_friend_request", stage="before_payment",
+         text="Didi: Bhai urgent 3000 chahiyo, khalti ma pathaideu. Call garna mildaina meeting ma chu.",
+         expect=dict(level_in=["high"], must_flag=["friend_impersonation"])),
     dict(id="16_text_cod_switch", stage="before_payment", text_file="text/t1_pasted_cod_switch.txt",
          expect=dict(level_in=["caution", "high"], must_flag=["advance_payment", "terms_changed"])),
     dict(id="17_text_honest_cake", stage="before_payment", text_file="text/t2_pasted_honest_cake.txt",
