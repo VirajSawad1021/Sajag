@@ -25,6 +25,9 @@ Built by **Team Markovian** (Viraj Sawad, Aakriti Pandey, Chandan Kumar Shah) fo
 | **Recovery mode** | A checklist in NRB's order — wallet first, final message, report the page, Cyber Bureau, NRB escalation — with verified official contacts only. |
 | **Cyber Bureau application** | The Bureau has no online form. Gemma fills its *Online Financial Fraud* application from the case (each field checked against the evidence); you review it and get a print-ready PDF with a B.S. date and numbered annexes. |
 | **"I shared my OTP"** | An emergency screen for the most common scam: call the wallet, change PINs, eSewa's 48-hour insurance window, report. |
+| **Hide private details** | Before upload, drag boxes over OTPs, balances, account numbers or faces; they're blacked out in the image pixels and only that copy is sent. |
+| **Read aloud in Nepali** | Verdict, warnings and next steps spoken with the phone's own Nepali voice — for parents and grandparents. Works offline. |
+| **"A friend asked for money?"** | Hacked-account check: no web search, but scripts to verify the person (a question only they'd know, a call on their usual number, refuse codes). |
 | **Your cases stay on your phone** | The Casebook is stored on the device. No account, no server copy. |
 | **Community-maintained patterns** | Warning patterns are YAML files in [`patterns/`](patterns/) — add one with a pull request. |
 
