@@ -6,6 +6,8 @@ from typing import Literal
 
 from pydantic import BaseModel, Field
 
+from .sms import SmsPayment
+
 Stage = Literal["before_payment", "after_payment"]
 RiskLevel = Literal["high", "caution", "low", "insufficient"]
 
@@ -152,6 +154,7 @@ class AnalysisResponse(BaseModel):
     next_steps: list[NextStep]
     deadlines: list[Deadline] = Field(default_factory=list)
     seller_names: list[str] = Field(default_factory=list)  # names the seller uses (not receivers/payees)
+    payments: list[SmsPayment] = Field(default_factory=list)  # read by code from forwarded bank/wallet SMS
     warnings: list[str] = Field(default_factory=list)
     engine: Literal["gemma", "offline-rules"]
 

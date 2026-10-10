@@ -108,3 +108,12 @@ def test_stream_emits_progress_then_result():
         body = "".join(res.iter_text())
     assert "event: progress" in body and '"step": "received"' in body
     assert "event: result" in body and "otp_credential_request" in body
+
+
+def test_sms_payment_read_by_code():
+    sms = "You have sent Rs. 3200 to 98XXXXX321 (Sushil Rai). Txn ID: TXN-7Q4K-2291 on 2026-09-28 19:28"
+    body = client.post("/api/analyze", data={"text": sms, "stage": "after_payment"}).json()
+    [p] = body["payments"]
+    assert p["amount"] == "3200" and p["transaction_id"] == "TXN-7Q4K-2291" and p["date"] == "2026-09-28"
+    assert any(f["field"] == "transaction_id" and f["span"] for f in body["facts"])
+    assert any(e["type"] == "payment_made" for e in body["events"])

@@ -120,6 +120,12 @@ def draft_fields(req: DraftRequest) -> PetitionFields:
             fields.payment_date = date.fromisoformat(fields.payment_date).isoformat()
         except ValueError:
             fields.payment_date = None
+    # Payments read by code from the user's SMS beat model guesses for amount, transaction ID and date.
+    debit = next((p for p in a.payments if p.direction == "debit"), None)
+    if debit:
+        fields.amount = fields.amount or debit.amount
+        fields.transaction_id = fields.transaction_id or debit.transaction_id
+        fields.payment_date = fields.payment_date or debit.date
     haystack = re.sub(r"[\s,]", "", evidence.casefold() + req.user_story_ne.casefold())
     for name in ("amount", "transaction_id", "receiver_name", "receiver_id"):
         value = getattr(fields, name)

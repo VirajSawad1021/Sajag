@@ -233,6 +233,26 @@ class _CaseScreenState extends State<CaseScreen> {
               ...xrays,
             ],
 
+            // ---- payments read from forwarded SMS
+            for (final p in a.payments) ...[
+              const SizedBox(height: 12),
+              RaisedCard(
+                child: Row(children: [
+                  const Icon(Icons.sms_outlined, size: 30),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                      Text(tr('smsPayment'), style: T.label),
+                      Text('Rs ${p['amount']} · ${p['direction'] == 'debit' ? tr('debited') : p['direction'] == 'credit' ? tr('credited') : ''}', style: T.h2),
+                      if (p['transaction_id'] != null) Text('${tr('txnId')}: ${p['transaction_id']}', style: T.small.copyWith(color: C.ink)),
+                      if (p['date'] != null) Text('${p['date']}', style: T.small),
+                      Text(lang.ne ? 'कोडले पढेको — AI ले होइन' : 'Read by code, not by AI', style: T.meta),
+                    ]),
+                  ),
+                ]),
+              ),
+            ],
+
             // ---- QR
             for (final q in a.qr.where((q) => q['payee_name'] != null)) ...[
               const SizedBox(height: 12),

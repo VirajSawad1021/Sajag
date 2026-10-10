@@ -17,6 +17,7 @@ from .grounding import find_span, normalize
 from .prompts import build_analyze_prompt
 from .qr import decode_qr_payloads, parse_payment_qr
 from .rules import keyword_analyze
+from .sms import parse_payments
 from .schemas import (
     AnalysisResponse,
     Deadline,
@@ -75,6 +76,9 @@ def analyze(
     audio_sources = [Source(id=f"aud_{i}", kind="audio", filename=a.filename) for i, a in enumerate(audios, start=1)]
     sources += audio_sources
     emit("received", {"images": len(images), "audios": len(audios), "text": bool(text.strip())})
+    payments = [p for s in sources if s.kind == "text" for p in parse_payments(s.transcript, s.id)]
+    for p in payments:
+        emit("sms", {"amount": p.amount, "direction": p.direction, "transaction_id": p.transaction_id, "date": p.date})
 
     pool = ThreadPoolExecutor(max_workers=max(1, len(images)))
     # Scam X-Ray boxes run in parallel with everything else; they only decorate verified warnings.
@@ -112,6 +116,7 @@ def analyze(
     deadlines = [_check_deadline(d, transcripts) for d in model_out.deadlines]
 
     signals += _qr_checks(qr, model_out.claimed_seller_names, pattern_catalog, facts)
+    _add_payment_facts(payments, facts, events, transcripts)
 
     signals.sort(key=lambda s: (not s.grounded, SEVERITY_ORDER[s.severity]))
     grounded = [s for s in signals if s.grounded]
@@ -149,9 +154,27 @@ def analyze(
         next_steps=_next_steps(grounded, stage, pattern_catalog),
         deadlines=deadlines,
         seller_names=[n for n in dict.fromkeys(model_out.claimed_seller_names) if n.strip()],
+        payments=payments,
         warnings=warnings,
         engine=engine,
     )
+
+
+def _add_payment_facts(payments, facts: list, events: list, transcripts: dict[str, str]) -> None:
+    """Payments read by code from SMS become facts (and a timeline event if Gemma didn't already add one)."""
+    for p in payments:
+        span = _span_in(p.quote.splitlines()[0], p.source_id, transcripts)
+        facts.append(Fact(field="payment", value=f"Rs {p.amount} {p.direction}", source_id=p.source_id,
+                          quote=p.quote.splitlines()[0], span=span))
+        if p.transaction_id:
+            facts.append(Fact(field="transaction_id", value=p.transaction_id, source_id=p.source_id,
+                              quote=p.transaction_id, span=_span_in(p.transaction_id, p.source_id, transcripts)))
+    if payments and not any(e.type == "payment_made" for e in events):
+        p = next((x for x in payments if x.direction == "debit"), payments[0])
+        events.append(Event(when=p.date, when_source="shown" if p.date else "unknown", type="payment_made",
+                            summary_en=f"Rs {p.amount} {p.direction} (from SMS)",
+                            summary_ne=f"रु {p.amount} {'भुक्तानी गरियो' if p.direction == 'debit' else 'प्राप्त भयो'} (SMS अनुसार)",
+                            source_id=p.source_id, quote=p.quote.splitlines()[0]))
 
 
 def _safe_locate(img: UploadedImage) -> list:

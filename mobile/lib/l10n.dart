@@ -168,6 +168,11 @@ const _s = <String, Map<String, String>>{
   'next': {'ne': 'अर्को', 'en': 'Next'},
   'start': {'ne': 'सुरु गरौं', 'en': "Let's start"},
   'skip': {'ne': 'छोड्नुहोस्', 'en': 'Skip'},
+  'live_sms': {'ne': 'SMS बाट भुक्तानी पढियो', 'en': 'Payment read from SMS'},
+  'smsPayment': {'ne': 'SMS मा भेटिएको भुक्तानी', 'en': 'Payment found in your SMS'},
+  'debited': {'ne': 'खाताबाट गयो', 'en': 'debited'},
+  'credited': {'ne': 'खातामा आयो', 'en': 'credited'},
+  'txnId': {'ne': 'कारोबार नम्बर', 'en': 'Transaction ID'},
   'readAloud': {'ne': 'सुनाउनुहोस्', 'en': 'Read aloud'},
   'stopReading': {'ne': 'रोक्नुहोस्', 'en': 'Stop'},
   'noNepaliVoice': {

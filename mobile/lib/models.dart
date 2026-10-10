@@ -161,6 +161,7 @@ class Analysis {
   List<Map<String, dynamic>> get facts => _list('facts');
   List<Map<String, dynamic>> get nextSteps => _list('next_steps');
   List<Map<String, dynamic>> get deadlines => _list('deadlines');
+  List<Map<String, dynamic>> get payments => _list('payments');
   List<String> get warnings => List<String>.from(j['warnings'] ?? const []);
 
   Map<String, dynamic>? source(String id) => sources.where((s) => s['id'] == id).firstOrNull;

@@ -118,6 +118,9 @@ class _AnalyzingScreenState extends State<AnalyzingScreen> {
       case 'qr':
         _add(_FeedItem(Icons.qr_code_2_rounded, tr('live_qr'),
             detail: '${d['payee'] ?? '—'}${d['crc_valid'] == false ? ' · checksum ✗' : ''}', color: C.caution));
+      case 'sms':
+        _add(_FeedItem(Icons.sms_outlined, tr('live_sms'),
+            detail: 'Rs ${d['amount']} · ${d['direction']}${d['transaction_id'] != null ? ' · ${d['transaction_id']}' : ''}', color: C.caution));
       case 'voice':
         _add(_FeedItem(Icons.graphic_eq_rounded, tr('live_voice'), detail: '“${d['transcript']}”'));
       case 'reading':

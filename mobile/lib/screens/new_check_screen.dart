@@ -17,6 +17,10 @@ import '../widgets/common.dart';
 import 'analyzing_screen.dart';
 import 'redact_screen.dart';
 
+// Synthetic wallet + bank SMS for the sample (no real numbers).
+const _sampleSms = 'You have sent Rs. 3200 to 98XXXXX321 (Sushil Rai). Txn ID: TXN-7Q4K-2291 on 2026-09-28 19:28\n\n'
+    'Dear Customer, your A/C XXXX1234 has been debited by NPR 3,200.00 on 28-09-2026 for eSewa load. Ref No: FT2609281928';
+
 /// What kind of check: a purchase (default) or a friend/relative asking for money (possible hacked account).
 enum CheckMode { purchase, friend }
 
@@ -250,6 +254,10 @@ class _NewCheckScreenState extends State<NewCheckScreen> {
                 : [
                 _SampleChip('COD → advance + QR', () => _loadSample('scam-chat.png', EvidenceKind.image)),
                 _SampleChip(lang.ne ? 'इमानदार बिक्रेता' : 'Honest seller', () => _loadSample('honest-chat.png', EvidenceKind.image)),
+                _SampleChip(lang.ne ? 'बैंक SMS' : 'Bank SMS', () => setState(() {
+                  _stage = 'after_payment';
+                  _text.text = _sampleSms;
+                })),
                 _SampleChip(lang.ne ? '🎙 पैसा तिरें, सामान आएन' : '🎙 Paid, nothing came', () async {
                   await _loadSample('voice-victim.ogg', EvidenceKind.audio, stage: 'after_payment');
                   await _loadSample('receipt.png', EvidenceKind.image, add: true);
