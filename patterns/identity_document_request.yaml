@@ -4,7 +4,7 @@ title_en: Asks for citizenship or other ID
 title_ne: नागरिकता वा परिचयपत्र माग
 description: The seller asks for a photo of citizenship, passport, licence or similar for an ordinary purchase.
 why_en: Nepal Police Cyber Bureau warns that documents collected this way can be misused later.
-why_ne: नेपाल प्रहरी साइबर ब्युरोले यसरी लिइएका कागजात पछि दुरुपयोग हुन सक्ने भनी चेतावनी दिएको छ।
+why_ne: यसरी लिइएका कागजात पछि दुरुपयोग हुन सक्ने भनी नेपाल प्रहरी साइबर ब्युरोले चेतावनी दिएको छ।
 not_always_scam_en: Some regulated services (SIM, bank, some deliveries) need ID through official channels — not through a chat with a seller.
 keywords:
   - citizenship
@@ -18,4 +18,4 @@ examples:
     text: "Order confirm garna nagarikta ko photo pathaunus"
 next_steps:
   - en: Do not send ID photos for ordinary purchases. If you already did, note when and to whom.
-    ne: सामान्य किनमेलका लागि परिचयपत्रको फोटो नपठाउनुहोस्। पठाइसक्नुभएको छ भने कहिले र कसलाई, टिपेर राख्नुहोस्।
+    ne: सामान्य किनमेलका लागि परिचयपत्रको फोटो नपठाउनुहोस्। पठाइसक्नुभएको छ भने कहिले र कसलाई पठाउनुभयो, टिपेर राख्नुहोस्।

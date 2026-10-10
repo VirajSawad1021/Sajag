@@ -1,24 +1,17 @@
 id: terms_changed
 severity: medium
-title_en: Terms changed after agreement (e.g., COD to advance)
-title_ne: सहमतिभन्दा पछि सर्त बदलियो (जस्तै: COD बाट अग्रिममा)
-description: The seller agreed to one payment method (e.g., COD) but later demands a different one (e.g., advance payment).
-why_en: Changing terms after the buyer commits is a common bait-and-switch tactic.
-why_ne: खरिदार सहमत भएपछि सर्त बदल्नु बिक्रेताको सामान्य फाँस हो।
-not_always_scam_en: Genuine logistical issues can force a change. Ask for the reason and verify.
-keywords:
-  - cod band
-  - cod banda
-  - advance matra
-  - COD band
-  - terms changed
-  - sarta badliyo
-  - सर्त बदलियो
+title_en: Terms changed during the conversation
+title_ne: कुराकानीको बीचमा सर्त परिवर्तन
+description: Price, payment method (e.g. COD to advance), delivery date or refund terms change from what was said earlier.
+why_en: Changing terms after you are committed is a common pressure tactic.
+why_ne: तपाईं किन्न तयार भएपछि सर्त बदल्नु दबाब दिने सामान्य तरिका हो।
+not_always_scam_en: Prices and stock genuinely change. What matters is whether the change is explained and you still have a safe option.
+keywords: []
 examples:
   - lang: rom-ne
-    text: "Sorry COD band bhayo, advance matra huncha"
-  - lang: ne
-    text: "माफ गर्नुहोस्, COD बन्द भयो, अग्रिम मात्र हुन्छ"
+    text: "Pahile COD milcha bhanne, pachi 'COD band bhayo, advance chahincha'"
 next_steps:
-  - en: Do not pay if the new terms are risky. Stick to the original agreement or cancel.
-    ne: नयाँ सर्त जोखिमपूर्ण छ भने पैसा नतिरनुहोस्। पहिलो सहमतिमै रहनुहोस् वा बाटो नबन्द गर्नुहोस्।
+  - en: Screenshot both the earlier and the later message before continuing.
+    ne: अगाडि र पछाडिको दुवै म्यासेजको स्क्रिनसट राख्नुहोस्।
+  - en: Ask the seller to honour the original terms in writing.
+    ne: सुरुमा भनिएको सर्त नै लिखित रूपमा पालना गर्न अनुरोध गर्नुहोस्।
