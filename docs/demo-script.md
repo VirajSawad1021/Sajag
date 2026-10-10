@@ -8,10 +8,18 @@ Use synthetic chats or your own screenshots, with permission. Prepare these the 
 - `demo/honest.png` — an honest seller chat: COD, exchange policy, no pressure.
 - `demo/receipt.png` — a payment receipt (synthetic).
 
+Run the backend before the demo, and keep the phone on the same Wi-Fi:
+
+```bash
+SAJAG_HOST=0.0.0.0 python backend/run.py
+```
+
+In the app: **Settings → Sajag server address → http://&lt;laptop IP&gt;:8000 → Test connection**. Do this the night before, not on stage.
+
 ## Flow
 
 1. **Hook (15 s).** "Once money is sent from a wallet, it is very hard to get back. The safest moment is the few seconds before someone scans the QR. Sajag is for that moment."
-2. **Share from phone (30 s).** On Android, share `2-chat.png` and `3-qr.png` from Gallery to Sajag (installed PWA).
+2. **The app on a real phone (30 s).** Open Sajag on the phone — native app, not a browser tab. On Android you can share `2-chat.png` and `3-qr.png` straight from Gallery; on iPhone, tap the upload button inside the app and pick the same two images. The live panel streams what the backend is doing: QR decoded, messages read, each warning verified.
 3. **Result (60 s).**
    - Banner: *High caution*.
    - QR card: the QR pays a different name than "KTM Mobile Hub" — read by code, not AI.
@@ -23,4 +31,4 @@ Use synthetic chats or your own screenshots, with permission. Prepare these the 
 
 ## If the Wi-Fi or API fails
 
-Run `python backend/run_mock.py` and paste the chat text instead. The offline keyword engine still flags it, and the UI says it is in offline mode.
+Run `python backend/run_mock.py` (or set `SAJAG_MOCK=1`) and paste the chat text instead. The offline keyword engine still flags it, and the UI says it is in offline mode. QR decoding still works in mock mode — it never needed the model.
