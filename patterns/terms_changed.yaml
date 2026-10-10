@@ -1,0 +1,17 @@
+id: terms_changed
+severity: medium
+title_en: Terms changed during the conversation
+title_ne: कुराकानीको बीचमा सर्त परिवर्तन
+description: Price, payment method (e.g. COD to advance), delivery date or refund terms change from what was said earlier.
+why_en: Changing terms after you are committed is a common pressure tactic.
+why_ne: तपाईं किन्न तयार भएपछि सर्त बदल्नु दबाब दिने सामान्य तरिका हो।
+not_always_scam_en: Prices and stock genuinely change. What matters is whether the change is explained and you still have a safe option.
+keywords: []
+examples:
+  - lang: rom-ne
+    text: "Pahile COD milcha bhanne, pachi 'COD band bhayo, advance chahincha'"
+next_steps:
+  - en: Screenshot both the earlier and the later message before continuing.
+    ne: अगाडि र पछाडिको दुवै म्यासेजको स्क्रिनसट राख्नुहोस्।
+  - en: Ask the seller to honour the original terms in writing.
+    ne: सुरुमा भनिएको सर्त नै लिखित रूपमा पालना गर्न अनुरोध गर्नुहोस्।

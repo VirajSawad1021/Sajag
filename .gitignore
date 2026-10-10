@@ -1,0 +1,16 @@
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+node_modules/
+frontend/dist/
+.DS_Store
+# never commit real evidence
+evals/private/
+test data/results/
+test data/private/
+# Official forms downloaded for reference (not ours to redistribute)
+financila_fraud_application_*.pdf
+data/official/

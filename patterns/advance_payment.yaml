@@ -1,0 +1,28 @@
+id: advance_payment
+severity: medium
+title_en: Payment requested before delivery
+title_ne: सामान आउनुअघि नै पैसा माग
+description: The seller asks for full or partial payment before the buyer receives or inspects the item.
+why_en: If the seller cannot be independently verified, money sent in advance is hard to get back.
+why_ne: बिक्रेताको पहिचान पुष्टि नभएसम्म अग्रिम पठाएको पैसा फिर्ता पाउन गाह्रो हुन्छ।
+not_always_scam_en: Some honest sellers ask for an advance on custom or pre-order items. Look at it together with other signals.
+keywords:
+  - advance
+  - agrim
+  - अग्रिम
+  - pahile paisa
+  - पहिले पैसा
+  - full payment
+  - payment pahile
+examples:
+  - lang: rom-ne
+    text: "Advance 50% pathaunus ani matra dispatch huncha"
+  - lang: ne
+    text: "पहिले पूरा पैसा पठाउनुहोस्, अनि मात्र सामान पठाउँछौं"
+  - lang: en
+    text: "Send full payment first, then we will ship"
+next_steps:
+  - en: Ask if cash on delivery (COD) is possible. If not, ask why.
+    ne: क्यास अन डेलिभरी (COD) मिल्छ कि मिल्दैन सोध्नुहोस्। मिल्दैन भने किन, त्यो पनि सोध्नुहोस्।
+  - en: Check the seller's page history, reviews and whether others have bought from them.
+    ne: बिक्रेताको पेजको इतिहास, रिभ्यु र अरूले किनेका छन् कि छैनन् हेर्नुहोस्।

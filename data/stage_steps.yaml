@@ -1,0 +1,16 @@
+# Next steps shown for every case at a given stage, after the pattern-specific ones.
+before_payment:
+  - en: Never share an OTP, PIN or password with a seller.
+    ne: बिक्रेतालाई OTP, PIN वा पासवर्ड कहिल्यै नदिनुहोस्।
+  - en: Before you confirm a payment, check the receiver name your wallet or bank app shows.
+    ne: भुक्तानी पुष्टि गर्नुअघि वालेट वा बैंक एपले देखाएको प्राप्तकर्ताको नाम जाँच्नुहोस्।
+after_payment:
+  - en: Contact your bank or wallet provider now using their official number, and give them the transaction ID.
+    ne: अहिले नै आफ्नो बैंक वा वालेट कम्पनीलाई आधिकारिक नम्बरमा सम्पर्क गरी कारोबार नम्बर (transaction ID) दिनुहोस्।
+    resource: bank_or_wallet
+  - en: Keep the original chat, listing, payment voucher and any delivery or refund messages. Do not delete the conversation.
+    ne: मूल च्याट, विज्ञापन, भुक्तानी भौचर र डेलिभरी वा रिफन्डसम्बन्धी म्यासेज सुरक्षित राख्नुहोस्। कुराकानी नमेटाउनुहोस्।
+    resource: cyber_bureau
+  - en: If the bank or wallet does not resolve it, you can file a grievance with Nepal Rastra Bank.
+    ne: बैंक वा वालेटले समाधान नगरेमा नेपाल राष्ट्र बैंकमा गुनासो दर्ता गर्न सक्नुहुन्छ।
+    resource: nrb_gunaso

@@ -1,0 +1,58 @@
+# Official places to get help. Sajag only links to these and prepares drafts — it never submits anything.
+# Every entry was read from the organisation's own website on last_checked. Re-check before each release:
+# numbers and procedures change. Do not add numbers from news articles, blogs or chats.
+- id: bank_or_wallet
+  name_en: Your bank or wallet provider
+  name_ne: तपाईंको बैंक वा वालेट कम्पनी
+  url: null
+  note_en: Contact them immediately, ask them to block the service if needed, and give them the transaction ID. Use the number in their official app or website, never one from the chat.
+  note_ne: तुरुन्तै सम्पर्क गर्नुहोस्, आवश्यक परे सेवा रोक्न भन्नुहोस् र कारोबार नम्बर दिनुहोस्। च्याटमा दिइएको होइन, आधिकारिक एप वा वेबसाइटको नम्बर प्रयोग गर्नुहोस्।
+  source: https://www.nrb.org.np/
+  last_checked: 2026-10-10
+- id: esewa
+  name_en: eSewa customer support
+  name_ne: ई-सेवा ग्राहक सेवा
+  url: https://esewa.com.np/
+  phones: ["1660-01-02121", "1810-21-02121"]
+  emails: ["csd@esewa.com.np"]
+  note_en: Toll-free numbers and email listed on eSewa's official website. eSewa also links to NRB's grievance portal.
+  note_ne: ई-सेवाको आधिकारिक वेबसाइटमा उल्लेखित टोल-फ्री नम्बर र इमेल।
+  source: https://esewa.com.np/
+  last_checked: 2026-10-10
+- id: khalti
+  name_en: Khalti customer support
+  name_ne: खल्ती ग्राहक सेवा
+  url: https://khalti.com/contact/
+  phones: ["16600158888", "01-5970017"]
+  emails: ["support@khalti.com", "grievance@khalti.com"]
+  note_en: Toll-free (NTC), landline and emails listed on Khalti's official website, which also publishes a dispute policy.
+  note_ne: खल्तीको आधिकारिक वेबसाइटमा उल्लेखित टोल-फ्री (NTC), ल्यान्डलाइन र इमेल।
+  source: https://khalti.com/
+  last_checked: 2026-10-10
+- id: nrb_gunaso
+  name_en: Nepal Rastra Bank grievance portal
+  name_ne: नेपाल राष्ट्र बैंक गुनासो पोर्टल
+  url: https://gunaso.nrb.org.np/
+  note_en: NRB's guidance — first complain to your bank or payment provider; if it is not resolved, register a grievance on this portal.
+  note_ne: नेपाल राष्ट्र बैंकको निर्देशन — पहिले सम्बन्धित बैंक वा सेवा प्रदायकमा गुनासो गर्नुहोस्; समाधान नभएमा यो पोर्टलमा गुनासो दर्ता गर्नुहोस्।
+  source: https://www.nrb.org.np/2026/08/%E0%A4%B5%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%AF%E0%A5%81%E0%A4%A4%E0%A5%80%E0%A4%AF-%E0%A4%AD%E0%A5%81%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BE%E0%A4%A8%E0%A5%80%E0%A4%AE%E0%A4%BE-%E0%A4%A0%E0%A4%97%E0%A5%80/
+  last_checked: 2026-10-10
+- id: cyber_bureau
+  name_en: Nepal Police Cyber Bureau
+  name_ne: नेपाल प्रहरी साइबर ब्युरो
+  url: https://cyberbureau.nepalpolice.gov.np/report-cyber-crime/
+  phones: ["9851286770", "01-5319044"]
+  emails: ["cyberbureau@nepalpolice.gov.np"]
+  note_en: There is no online form. Fill the Bureau's "Online Financial Fraud" application (typed or handwritten, Nepali or English), attach a copy of your citizenship/national ID/passport and the links (URLs) and clear screenshots, and submit it at your nearest district or ward police office or the Cyber Bureau office in Bhotahiti. If you cannot go in person, email everything to cyberbureau@nepalpolice.gov.np.
+  note_ne: अनलाइन फारम छैन। "विद्युतीय माध्यम सम्बद्ध ठगी" को निवेदन (टाइप वा हस्तलिखित, नेपाली वा अंग्रेजी) भरी नागरिकता/राष्ट्रिय परिचयपत्र/राहदानीको प्रतिलिपि, लिङ्क (URL) र स्पष्ट स्क्रिनसट सहित नजिकको जिल्ला वा इलाका/वडा प्रहरी कार्यालय वा भोटाहिटीस्थित साइबर ब्युरोमा बुझाउनुहोस्। स्वयं उपस्थित हुन नसके cyberbureau@nepalpolice.gov.np मा इमेल गर्न सकिन्छ।
+  form_url: https://cyberbureau.nepalpolice.gov.np/media/filer_public/a4/23/a42313cf-5545-4a6c-a5f9-7313fbbb7fd9/financila_fraud_application_2083_06_14.pdf
+  source: https://cyberbureau.nepalpolice.gov.np/report-cyber-crime/
+  last_checked: 2026-10-10
+- id: consumer_complaint
+  name_en: Department of Commerce consumer complaint form
+  name_ne: वाणिज्य विभाग उपभोक्ता उजुरी फारम
+  url: https://monitoring.doc.gov.np/ConsumerComplaint
+  note_en: For problems with goods or services such as quality or price. Not yet re-verified by the team.
+  note_ne: सामान वा सेवाको गुणस्तर, मूल्य जस्ता समस्याका लागि।
+  source: null
+  last_checked: null

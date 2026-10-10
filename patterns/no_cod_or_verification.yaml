@@ -1,0 +1,22 @@
+id: no_cod_or_verification
+severity: medium
+title_en: Refuses cash on delivery or any way to verify
+title_ne: COD वा प्रमाणित गर्ने उपाय अस्वीकार
+description: The seller refuses COD, a video call, a shop visit or any other way to check the item exists.
+why_en: Without any way to verify, you are relying only on trust.
+why_ne: जाँच्ने कुनै उपाय नभएपछि तपाईं केवल विश्वासमा भर पर्नुहुन्छ।
+not_always_scam_en: Small sellers sometimes stop COD after bad experiences. Ask for an alternative way to verify.
+keywords:
+  - cod mildaina
+  - cod chaina
+  - no cod
+  - cod hudaina
+  - video call mildaina
+  - COD हुँदैन
+  - COD मिल्दैन
+examples:
+  - lang: rom-ne
+    text: "COD mildaina dai, esewa ma pathaunus"
+next_steps:
+  - en: Ask for a live video of the item with today's date written on paper.
+    ne: आजको मिति कागजमा लेखेर सामानको लाइभ भिडियो देखाउन अनुरोध गर्नुहोस्।

@@ -1,0 +1,16 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+pydantic>=2.7
+google-genai>=2.29
+pyyaml>=6.0
+opencv-python-headless>=4.10
+numpy>=1.26
+python-dotenv>=1.0
+nepali-datetime>=1.0
+playwright>=1.45  # petition PDF (uses installed Chrome)
+
+# dev
+pytest>=8.0
+httpx>=0.27
+qrcode[pil]>=7.4

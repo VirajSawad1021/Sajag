@@ -1,0 +1,22 @@
+id: extra_fee_to_release
+severity: high
+title_en: Extra fee demanded to release item or refund
+title_ne: सामान वा रिफन्ड छुटाउन थप शुल्क माग
+description: After payment, a new "customs", "clearance", "delivery" or "refund processing" fee is demanded.
+why_en: Paying more to get back money you already paid is a classic pattern of repeated loss.
+why_ne: पहिले तिरेको पैसा फिर्ता पाउन फेरि पैसा तिर्नु बारम्बार ठगिने सामान्य तरिका हो।
+not_always_scam_en: Real import duties exist, but they are paid to the courier or customs office with an official receipt.
+keywords:
+  - customs
+  - clearance
+  - भन्सार
+  - release fee
+  - refund garna
+  - refund ko lagi
+  - processing fee
+examples:
+  - lang: rom-ne
+    text: "Refund garna 1500 processing fee pathaunu parcha"
+next_steps:
+  - en: Do not send more money. Save all messages and receipts.
+    ne: थप पैसा नपठाउनुहोस्। सबै म्यासेज र रसिद सुरक्षित राख्नुहोस्।

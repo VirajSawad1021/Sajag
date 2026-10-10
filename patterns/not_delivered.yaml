@@ -1,0 +1,28 @@
+id: not_delivered
+severity: high
+title_en: Paid, but the item has not arrived and the seller is not responding
+title_ne: पैसा तिरियो, तर सामान आएन र बिक्रेताले जवाफ दिँदैनन्
+description: The buyer says they have paid, the promised delivery date has passed, and/or the seller has stopped replying or answering calls.
+why_en: Act quickly. Banks and wallets can sometimes act on fresh fraud reports, and keeping evidence early makes a complaint stronger.
+why_ne: छिटो कदम चाल्नुहोस्। ताजा उजुरीमा बैंक/वालेटले कहिलेकाहीँ कारबाही गर्न सक्छन्, र चाँडै प्रमाण राख्दा उजुरी बलियो हुन्छ।
+not_always_scam_en: Deliveries are sometimes genuinely late. Give a clear written deadline to the seller, but don't wait long before contacting your bank or wallet.
+keywords:
+  - saman aayena
+  - saman aaena
+  - not received
+  - not delivered
+  - सामान आएन
+  - phone uthaudaina
+  - phone uthaunu hunna
+  - reply dinna
+examples:
+  - lang: rom-ne
+    text: "6 din bhayo, saman aayena. Phone pani uthaunu hunna."
+  - lang: ne
+    text: "पैसा पठाएँ, तर सामान आएन र अब फोन पनि उठाउँदैन।"
+next_steps:
+  - en: Send the seller one clear written message with a deadline, and screenshot it.
+    ne: बिक्रेतालाई अन्तिम मिति तोकेर लिखित म्यासेज पठाउनुहोस् र त्यसको स्क्रिनसट राख्नुहोस्।
+  - en: Report it to your bank or wallet now with the transaction ID, then prepare a complaint.
+    ne: अहिले नै कारोबार नम्बरसहित बैंक वा वालेटलाई जानकारी दिनुहोस्, अनि उजुरी तयार गर्नुहोस्।
+    resource: bank_or_wallet

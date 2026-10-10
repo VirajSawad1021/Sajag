@@ -1,0 +1,15 @@
+id: price_too_good
+severity: low
+title_en: Price far below the usual market price
+title_ne: बजार मूल्यभन्दा धेरै कम मूल्य
+description: The product (often phones, electronics, branded goods) is offered far below the usual price.
+why_en: Very low prices are used to attract people and make them skip checks.
+why_ne: धेरै सस्तो मूल्य देखाएर मानिसलाई आकर्षित गरी जाँच नगरी किन्न लगाइन्छ।
+not_always_scam_en: Clearance sales and second-hand items can be genuinely cheap. Only the model's judgement backs this signal, so treat it as weak.
+keywords: []
+examples:
+  - lang: rom-ne
+    text: "iPhone 15 Pro Max new box pack Rs 45,000 matra"
+next_steps:
+  - en: Compare the price with two or three well-known shops.
+    ne: दुई-तीन वटा चिनिएका पसलको मूल्यसँग तुलना गर्नुहोस्।

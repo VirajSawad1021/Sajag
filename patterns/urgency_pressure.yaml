@@ -1,0 +1,25 @@
+id: urgency_pressure
+severity: low
+title_en: Pressure to decide quickly
+title_ne: छिटो निर्णय गर्न दबाब
+description: Messages that push the buyer to pay immediately ("last piece", "today only", "stock is running out").
+why_en: Urgency stops people from checking details they would normally check.
+why_ne: हतार गराउँदा मानिसले सामान्यतया जाँच्ने कुरा पनि जाँच्दैनन्।
+not_always_scam_en: Real sales also say "limited stock". On its own this is weak; it matters more combined with advance payment.
+keywords:
+  - stock sakincha
+  - stock sakiyo
+  - aaja matra
+  - today only
+  - last piece
+  - last one
+  - chhito
+  - छिटो
+  - आज मात्र
+  - स्टक सकिन्छ
+examples:
+  - lang: rom-ne
+    text: "Last piece matra baki cha, aaja nai pathaunus"
+next_steps:
+  - en: Take your time. A genuine seller will usually wait a few hours for you to verify.
+    ne: हतार नगर्नुहोस्। साँचो बिक्रेताले जाँच्नका लागि केही घण्टा पर्खन्छन्।
