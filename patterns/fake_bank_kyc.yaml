@@ -1,10 +1,10 @@
 id: fake_bank_kyc
 severity: high
 title_en: Fake bank or wallet staff asking for KYC update
-title_ne: नकली बैंक वा वालेट कर्मचारी ले KYC अपडेट माग्दा
+title_ne: नकली बैंक वा वालेट कर्मचारीले KYC अपडेट माग्दा
 description: Someone pretends to be from your bank, eSewa, Khalti, IME Pay, or other wallet, saying your KYC is expiring or needs update. They ask for OTP, documents, or to click a link.
 why_en: Real banks and wallets never ask for OTP, full card details, or passwords via calls/messages. They direct you to their official app or branch.
-why_ne: साँचो बैंक/वालेट कहिल्यै कल, म्यासेज वा लिङ्क मार्फत OTP, कार्ड विवरण वा पासवर्ड माग्दैनन्। उहाँले आफ्नै आधिकारिक एप वा शाखामा जाने भन्छन्।
+why_ne: साँचो बैंक/वालेट कहिल्यै कल, म्यासेज वा लिङ्क मार्फत OTP, कार्ड विवरण वा पासवर्ड माग्दैनन्। उनीहरू आफ्नै आधिकारिक एप वा शाखामा जाने भन्छन्।
 not_always_scam_en: Banks do send reminders to update KYC, but they never ask for OTP or passwords over phone/chat. Always use the official app.
 keywords:
   - kyc update

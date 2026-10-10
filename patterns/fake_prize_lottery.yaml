@@ -24,13 +24,13 @@ examples:
   - lang: rom-ne
     text: "Tapai iPhone 15 jiteko chau! Claim garna 2000 tax pathaunus"
   - lang: ne
-    text: "तपाईंले बाइक जित्नुभएको छ! इनाम लिनका लागि ५००० प्रक्रिसिङ शुल्क तिर्नुहोस्"
+    text: "तपाईंले बाइक जित्नुभएको छ! इनाम लिनका लागि ५००० प्रोसेसिङ शुल्क तिर्नुहोस्"
   - lang: en
     text: "Congratulations! You won Rs 50,000. Send Rs 500 processing fee to claim."
 next_steps:
   - en: Do not pay any fee to claim a prize. Real prizes are free.
-    ne: इनाम लिनका लागि कुनै शुल्क नतिरनुहोस्। साँचो इनाम निःशुल्क हुन्छ।
+    ne: इनाम लिनका लागि कुनै शुल्क नतिर्नुहोस्। साँचो इनाम निःशुल्क हुन्छ।
   - en: Check if the sender is from an official company page. Scammers use fake pages.
     ne: पठाउने आधिकारिक कम्पनीको पृष्ठबाट हो कि होइन हेर्नुहोस्। ठगहरू नकली पृष्ठ प्रयोग गर्छन्।
   - en: If it sounds too good to be true, it probably is.
-    text: यो राम्रो देखिन्छ भने, यो ठगी हुन्छ।
+    ne: धेरै राम्रो सुनिन्छ भने प्रायः ठगी नै हुन्छ।

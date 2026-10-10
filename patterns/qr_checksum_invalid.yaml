@@ -1,18 +1,14 @@
 id: qr_checksum_invalid
 severity: medium
-title_en: QR code failed checksum (tampered or fake)
-title_ne: QR कोडको चेकसम नमिल्यो (तोडिएको वा नकली)
-description: The QR code data does not match its internal checksum, meaning the code was edited or generated incorrectly.
-why_en: A valid payment QR always passes its checksum. A mismatch means someone tampered with it.
-why_ne: सही भुक्तानी QR कोडको चेकसम कहिल्यै नमिल्न हुँदैन। नमिल्यो भने त्यो तोडिएको वा नकली हो।
-not_always_scam_en: Rarely, a damaged or poorly printed QR can fail. If the image is clear and it still fails, treat it as suspicious.
-keywords:
-  - qr checksum
-  - qr tampered
-  - qr fake
-examples:
-  - lang: en
-    text: "QR code checksum validation failed"
+detected_by: code
+title_en: Payment QR looks edited or damaged
+title_ne: भुक्तानी QR परिवर्तन गरिएको वा बिग्रिएको देखिन्छ
+description: The checksum stored inside the payment QR does not match its contents. Detected by code, not by the model.
+why_en: A QR whose contents were changed after it was generated can send money somewhere other than intended, for example a sticker placed over a shop's real QR.
+why_ne: बनाइसकेपछि भित्रको विवरण बदलिएको QR ले पैसा अर्कै ठाउँमा पठाउन सक्छ, जस्तै पसलको असली QR माथि टाँसिएको नक्कली स्टिकर।
+not_always_scam_en: A blurred or cropped screenshot can also break the checksum. Ask for a fresh QR, or pay by typing the verified ID.
+keywords: []
+examples: []
 next_steps:
-  - en: Do not scan this QR for payment. Ask the seller for a fresh QR from their official wallet/bank app.
-    ne: यो QR ले पैसा नतिरनुहोस्। बिक्रेताबाट उनको आधिकारिक एप्बाट नयाँ QR माग्नुहोस्।
+  - en: Don't pay with this QR. Ask the seller for a fresh QR, or type in the receiver's ID and check the name your app shows.
+    ne: यो QR बाट भुक्तानी नगर्नुहोस्। नयाँ QR माग्नुहोस्, वा प्राप्तकर्ताको ID आफैं टाइप गरी एपले देखाएको नाम जाँच्नुहोस्।

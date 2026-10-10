@@ -1,18 +1,14 @@
 id: qr_payee_mismatch
 severity: high
-title_en: QR code pays a different person than the seller
-title_ne: QR कोडले बिक्रेताबाट फरक व्यक्तिलाई पैसा पठाउँछ
-description: The decoded QR shows a payee name that does not match the seller's claimed identity.
-why_en: Money sent to a mismatched QR goes to someone else. The seller may be using another person's account.
-why_ne: फरक नाममा पैसा पठाएपछि त्यो पैसा फर्काउन गाह्रो हुन्छ। बिक्रेता अरूको खाता प्रयोग गरेको हुन सक्छ।
-not_always_scam_en: Family members sometimes share accounts. Ask the seller to confirm whose name is on the account.
-keywords:
-  - qr mismatch
-  - qr payee
-  - payee name
-examples:
-  - lang: en
-    text: "QR decoded payee: SITA SHARMA (seller claimed: Ram Thapa)"
+detected_by: code
+title_en: QR pays someone other than the named seller
+title_ne: QR ले बिक्रेताको नामभन्दा फरक व्यक्तिलाई पैसा पठाउँछ
+description: The payee name stored inside the payment QR does not match the shop or seller name used in the chat. Detected by code, not by the model.
+why_en: Your money goes to whoever is named in the QR — not to the page name you see in the chat.
+why_ne: तपाईंको पैसा च्याटमा देखिएको पेजको नाममा होइन, QR मा लेखिएको व्यक्तिकहाँ जान्छ।
+not_always_scam_en: Small shops often use the owner's personal account. Ask who the account belongs to before paying.
+keywords: []
+examples: []
 next_steps:
-  - en: Ask the seller why the QR pays a different name. Do not pay until clarified.
-    ne: बिक्रेताबाट सोध्नुहोस् QR फरक नाममा किन पठाउँछ। स्पष्ट नभएसम्म पैसा नतिरनुहोस्।
+  - en: Ask the seller to explain whose account this is. Before paying, check the name shown in your wallet's confirmation screen.
+    ne: यो खाता कसको हो भनी बिक्रेतालाई सोध्नुहोस्। पैसा पठाउनुअघि वालेटको पुष्टि स्क्रिनमा देखिएको नाम जाँच्नुहोस्।
